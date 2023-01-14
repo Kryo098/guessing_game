@@ -1,13 +1,13 @@
 use std::io;
 
 fn main() {
-    println!("数を当ててごらん");
-    println!("ほら、予想を入力してね");
+    println!("Guess the number!");
+    println!("Please input your guess.");
 
-    let mut guess = string::new();
+    let mut guess = String::new();
 
     io::stdin()
         .read_line(&mut guess)
-        .expect("行の読み込みに失敗しました");
-    println!("次のように予想しました：　{}", guess);
+        .expect("Failed to read line");
+    println!("You guessed: {}", guess);
 }
